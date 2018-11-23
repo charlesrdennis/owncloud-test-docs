@@ -1,5 +1,5 @@
 ﻿# ownCloud Quickstart 
-### This guide includes selected highlights about preparing, installing, configuring, and managing users on your ownCloud Server.  Quickstart instructions about installing clients and connecting the clients to your organization's ownCloud server are also included in this guide.
+### This guide includes selected highlights about preparing, installing, configuring, and managing users on your ownCloud Server.  Quickstart information about installing clients and connecting the clients to your organization's ownCloud server are also included in this guide.
 ## Preparing to Install Your ownCloud Server
 
 You must install the ownCloud Server on one of the [officially supported Linux operating systems](https://doc.owncloud.org/server/latest/admin_manual/installation/system_requirements.html).  The installation environment must include Apache 2.4 web server, MySQL/MariaDB with InnoDB storage engine (MyISAM is not supported), and PHP 5.6 or later.  
@@ -12,7 +12,7 @@ You can install your ownCloud server using:
 - [Linux Package Manager](https://doc.owncloud.org/server/latest/admin_manual/installation/linux_installation.html) 
 - [Source Tarball](https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html)
 - [Docker Image](https://doc.owncloud.org/server/latest/admin_manual/installation/docker/)
-- [Appliance](%28https://doc.owncloud.org/server/latest/admin_manual/appliance/installation.html%29) 
+- [Appliance](https://doc.owncloud.org/server/latest/admin_manual/appliance/installation.html) 
 
 ## ownCloud Server  Configuration
 There are many server and supporting application items which you must configure.  These include:
