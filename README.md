@@ -39,7 +39,6 @@ A typical ``trusted_domains`` configuration is like:
 			 1 => 'yourserverIP_or_name.example.com',
 			 2 => '192.168.1.11',
 		],
-
 ## Adding User Accounts to the ownCloud Server
 Add user accounts on the User Management page of your ownCloud User Interface, accessible by connecting to your ownCloud server and logging in with your administrator userID and password.
 
