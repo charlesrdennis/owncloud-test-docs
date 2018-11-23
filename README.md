@@ -1,89 +1,68 @@
-# Easy Markdown to Github Pages
+﻿# ownCloud Quickstart 
+### This guide includes selected highlights about preparing, installing, configuring, and managing users on your ownCloud Server.  Quickstart instructions about installing clients and connecting the clients to your organization's ownCloud server are also included in this guide.
+## Preparing to Install Your ownCloud Server
 
-## Introduction
+You must install the ownCloud Server on one of the [officially supported Linux operating systems](https://doc.owncloud.org/server/latest/admin_manual/installation/system_requirements.html).  The installation environment must include Apache 2.4 web server, MySQL/MariaDB with InnoDB storage engine (MyISAM is not supported), and PHP 5.6 or later.  
 
-This little guide demonstrate how to turn any [Github](http://github.com) repository with a bunch of [Markdown](https://en.wikipedia.org/wiki/Markdown) files into a simple website using [Github Pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/).
+The installation host must have command-line or Cron access.  It is preferable that your environment have both types of access.
 
-* You don't need to use the command line or anything other than your browser.
-* It doesn't require any knowledge in Jekyll.
-* It's completely compatible with any bunch of markdown files you already have in any existing repository without any modification to those files. That includes the basic `README.md` almost all repositories contain.
-* The markdown files will remain just as readable and usable in Github than in your website.
+A scale-out deployment, or federated cloud sharing, is recommended to ensure that ownCloud instances are kept to a managable size.
+## ownCloud Server Installation
+You can install your ownCloud server using:
+- [Linux Package Manager](https://doc.owncloud.org/server/latest/admin_manual/installation/linux_installation.html) 
+- [Source Tarball](https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html)
+- [Docker Image](https://doc.owncloud.org/server/latest/admin_manual/installation/docker/)
+- [Appliance](%28https://doc.owncloud.org/server/latest/admin_manual/appliance/installation.html%29) 
 
-In fact this guide uses the same configuration and can be read both in Github and in Github Pages, at your preference:
+## ownCloud Server  Configuration
+There are many server and supporting application items which you must configure.  These include:
+- [Database configuration](https://doc.owncloud.org/server/latest/admin_manual/configuration/database/)
+- [File Sharing and Management](https://doc.owncloud.org/server/latest/admin_manual/configuration/files/)
+- [LDAP Proxy-Cache Server Installation and Configuration](https://doc.owncloud.org/server/latest/admin_manual/configuration/ldap/ldap_proxy_cache_server_setup.html)
+- [Mimetypes Management](https://doc.owncloud.org/server/latest/admin_manual/configuration/mimetypes/index.html)
+- [Server Configuration](https://doc.owncloud.org/server/latest/admin_manual/configuration/server/index.html)
 
-* [Here is the link to the Github version](https://github.com/nicolas-van/easy-markdown-to-github-pages)
-* [Here is the link to the Github Pages version](https://nicolas-van.github.io/easy-markdown-to-github-pages/)
+By default, your ownCloud server is configured under the route 
+``/owncloud`` , using the default http port ``8080``.
 
-## Step by step instructions
+The default is: 
+``https://yourhostIP_or_name.com/owncloud``
 
-### Determine the repository where you want to activate Github Pages
+You specify every URL (except the loopback address, which is whiteliested by default) that will used by users to access your ownCloud server in the the ``config.php`` file, under the ``trusted_domains`` setting.     
 
-You can of course create a new repository if you want.
+Users are allowed to log into your ownCloud server only when they point their browsers to a URL that is listed in the `trusted_domains` setting.
 
-### Create the `_.config.yml` file
+A typical ``trusted_domains`` configuration is like:
+<code>
+			'trusted_domains' => [
+			 0 => 'localhost',
+			 1 => 'yourserverIP_or_name.example.com',
+			 2 => '192.168.1.11',
+		],
 
-That file should be created on the root of your repository. Here is some content to copy-paste in it:
+## Adding User Accounts to the ownCloud Server
+Add user accounts on the User Management page of your ownCloud User Interface, accessible by connecting to your ownCloud server and logging in with your administrator userID and password.
 
-```
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
-include:
-  - CONTRIBUTING.md
-  - README.md
-  - LICENSE.md
-  - COPYING.md
-  - CODE_OF_CONDUCT.md
-  - CONTRIBUTING.md
-  - ISSUE_TEMPLATE.md
-  - PULL_REQUEST_TEMPLATE.md
-```
+Create a new user account by:
+- Entering the new user's Login Name and initial password
+- Specifying any optional Groups memberships
+- Clicking the Create button to complete user creation
 
-It's basically just a few tuning of Github Pages' default configuration to have a better handling of Markdown files.
+See [User Management](https://doc.owncloud.org/server/10.0/admin_manual/configuration/user/) for complete details about user creation and management.
+## Connecting to the ownCloud Server with Desktop and Mobile Clients
+You can connect to your organization's ownCloud server using desktop (Windows, Mac, or Linux)  and mobile (IOS and Android) clients.  
 
-### Activate Github Pages in your repository configuration
+All client installations require that you enter the information provided by your ownCloud administrator:
 
-On the Github page of your project go into `Settings > Options > Github Pages`:
+- The address of your organization's ownCloud server
+- Your userID and password
 
-![](./printscreen1.png)
+Download the ownCloud Desktop clients [here.](https://owncloud.org/download/)  View the complete desktop client manual [here](https://doc.owncloud.org/desktop/latest/).
+Download the ownCloud mobile clients from:
 
-In the `Source` option, select `master branch` then `Save`:
+- [IOS App Store](https://itunes.apple.com/us/app/owncloud/id543672169?ls=1&mt=8)   
+	- View the entire IOS App manual [here](https://doc.owncloud.org/ios/).
+- [Google Play Store](https://play.google.com/store/apps/details?id=com.owncloud.android)  
+	- View the entire Android App manual [here](https://doc.owncloud.org/android/).
+     
 
-![](./printscreen2.png)
-
-You must also choose a theme:
-
-![](./printscreen3.png)
-
-That's it! Now you can juste use the link provided by Github to access you website:
-
-![](./printscreen4.png)
-
-## Usage guide
-
-* Any markdown file in your repository will display in your Github Pages website. You just have to use the same path to access it and replace the `.md` extension by `.html`.
-* To make links between your Markdown files just use a relative path to the other Markdown file. The configuration you copy pasted in your `_config.yml` provides a plugin to convert those URLs. So your Markdown files will have correct links both in Github and Github Pages.
-* The index page of your website can be a `index.md` file or a `README.md` file. If both exists the `index.md` file has priority.
-* You should be able to use any [Github Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-## Known differences between Github and Github Pages
-
-* No automatic links with Github Pages. The Github Markdown renderer can automatically detect a simple copy-pasted link and make it a clickable link. Github Pages doesn't propose a feature to reproduce that behavior, so you'll have to braces your links with the `[]()` syntax.
-
-## Recipes
-
-Since the purpose of this guide is to demonstrate how to publish multiple Markdown files as a website but I don't have much more to say I will propose you some delicious recipes instead:
-
-* [Escalivada](./recipes/Escalivada.md)
-* [Gazpacho](./recipes/Gazpacho.md)
-* [Pasta all'amatriciana](./recipes/Pasta_all_amatriciana.md)
-
-## Contributing
-
-See the [Contribution Guide](./CONTRIBUTING.md).
-
-## License
-
-See the [License File](./LICENSE.md).
