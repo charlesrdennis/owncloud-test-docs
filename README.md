@@ -8,7 +8,7 @@ The installation host must have command-line or Cron access for ownCloud admistr
 
 A scale-out deployment, or federated cloud sharing, is recommended to ensure that ownCloud instances are kept to a manageable size.  See [Deployment Recommendations](https://doc.owncloud.org/server/latest/admin_manual/installation/deployment_recommendations.html) for more details.
 
-Hardware, software, and storage requirements are also key factors in installation preparation. See [Deployment Considerations](https://doc.owncloud.org/server/latest/admin_manual/installation/deployment_considerations.html).
+Hardware, software, and storage requirements are also key factors in installation preparation. See [Deployment Considerations](https://doc.owncloud.org/server/latest/admin_manual/installation/deployment_considerations.html) for more details.
 
 ## Installing an ownCloud Server 
 You can install your ownCloud server using one of the following methods:
