@@ -4,11 +4,11 @@
 
 You must install the ownCloud Server on one of the [officially supported Linux operating systems](https://doc.owncloud.org/server/latest/admin_manual/installation/system_requirements.html).  The installation environment must include Apache 2.4 web server, MySQL/MariaDB with InnoDB storage engine (MyISAM is not supported), and PHP 5.6 or later.  
 
-The installation host must have command-line or Cron access.  It is preferable that your environment have both types of access.
+The installation host must have command-line or Cron access for ownCloud admistrators.  It is preferable that your environment have both types of access.
 
-A scale-out deployment, or federated cloud sharing, is recommended to ensure that ownCloud instances are kept to a manageable size.
+A scale-out deployment, or federated cloud sharing, is recommended to ensure that ownCloud instances are kept to a manageable size.  See [Deployment Recommendations](https://doc.owncloud.org/server/latest/admin_manual/installation/deployment_recommendations.html) for more details.
 
-Hardware, software, and storage requirements are also key factors in installation preparation. See [deployment considerations](https://doc.owncloud.org/server/latest/admin_manual/installation/deployment_considerations.html).
+Hardware, software, and storage requirements are also key factors in installation preparation. See [Deployment Considerations](https://doc.owncloud.org/server/latest/admin_manual/installation/deployment_considerations.html).
 
 ## Installing an ownCloud Server 
 You can install your ownCloud server using one of the following methods:
