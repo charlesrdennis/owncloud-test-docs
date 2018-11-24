@@ -53,7 +53,7 @@ See [User Management](https://doc.owncloud.org/server/10.0/admin_manual/configur
 ## Connecting to the ownCloud Server with Desktop and Mobile Clients
 You can connect to your organization's ownCloud server using desktop (Windows, Mac, or Linux)  and mobile (IOS and Android) clients.  
 
-All client installations require that you enter the information provided by your ownCloud administrator:
+All client installations require that you enter the following information provided by your ownCloud administrator.
 
 - The address of your organization's ownCloud server
 - Your user ID and password
