@@ -28,7 +28,7 @@ There are many server and supporting application items which you must configure.
 By default, your ownCloud server is configured under the route 
 ``/owncloud`` , using the default http port ``8080``.
 
-The default is: 
+The default address is: 
 ``https://yourhostIP_or_name.com/owncloud``
 
 Specify every URL (except the loop-back address, which is white-listed by default), that will be used to access your ownCloud server. List the URLs in the ``config.php`` file, under the ``trusted_domains`` setting.  Users are allowed to log into your ownCloud server only when they point their browsers to a URL that is listed in the `trusted_domains` setting.
