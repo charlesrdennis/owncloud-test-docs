@@ -35,7 +35,6 @@ You specify every URL (except the loop-back address, which is white-listed by de
 
 Here is an example of a typical ``trusted_domains`` configuration:
 
-
 			'trusted_domains' => [
 			 0 => 'localhost',
 			 1 => 'yourserverIP_or_name.example.com',
