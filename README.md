@@ -8,7 +8,7 @@ The installation host must have command-line or Cron access.  It is preferable t
 
 A scale-out deployment, or federated cloud sharing, is recommended to ensure that ownCloud instances are kept to a manageable size.
 
-See hardware, software, and storage [deployment considerations](https://doc.owncloud.org/server/latest/admin_manual/installation/deployment_considerations.html).
+Hardware, software, and storage requirements are also key factors in installation preparation. See [deployment considerations](https://doc.owncloud.org/server/latest/admin_manual/installation/deployment_considerations.html).
 
 ## Installing an ownCloud Server 
 You can install your ownCloud server using one of the following methods:
@@ -31,7 +31,7 @@ By default, your ownCloud server is configured under the route
 The default is: 
 ``https://yourhostIP_or_name.com/owncloud``
 
-You specify every URL (except the loop-back address, which is white-listed by default) that will used to access your ownCloud server. List the URLs in the ``config.php`` file, under the ``trusted_domains`` setting.  Users are allowed to log into your ownCloud server only when they point their browsers to a URL that is listed in the `trusted_domains` setting.
+Specify every URL (except the loop-back address, which is white-listed by default), that will be used to access your ownCloud server. List the URLs in the ``config.php`` file, under the ``trusted_domains`` setting.  Users are allowed to log into your ownCloud server only when they point their browsers to a URL that is listed in the `trusted_domains` setting.
 
 Here is an example of a typical ``trusted_domains`` configuration:
 
