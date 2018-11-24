@@ -34,13 +34,14 @@ The default is:
 You specify every URL (except the loop-back address, which is white-listed by default) that will used to access your ownCloud server. List the URLs in the ``config.php`` file, under the ``trusted_domains`` setting.  Users are allowed to log into your ownCloud server only when they point their browsers to a URL that is listed in the `trusted_domains` setting.
 
 Here is an example of a typical ``trusted_domains`` configuration:
-<code>
+
+
 			'trusted_domains' => [
 			 0 => 'localhost',
 			 1 => 'yourserverIP_or_name.example.com',
 			 2 => '192.168.1.11',
 		],
-</code>
+
 ## Adding User Accounts to the ownCloud Server
 Add user accounts on the User Management page of your ownCloud User Interface. Access User Management by connecting to your ownCloud server and logging in with your administrator user ID and password.
 
