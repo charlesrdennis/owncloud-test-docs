@@ -56,7 +56,7 @@ You can connect to your organization's ownCloud server using desktop (Windows, M
 All client installations require that you enter the following information provided by your ownCloud administrator.
 
 - The address of your organization's ownCloud server
-- Your user ID and password
+- Your ownCloud user ID and password
 
 Download the ownCloud Desktop clients [here](https://owncloud.org/download/).  View the complete desktop client manual [here](https://doc.owncloud.org/desktop/latest/).
 Download the ownCloud mobile clients from:
