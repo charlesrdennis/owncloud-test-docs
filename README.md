@@ -67,7 +67,7 @@ Download the ownCloud mobile clients from:
 	- View the entire Android App manual [here](https://doc.owncloud.org/android/).
 	
 ## Completing Other Tasks
-For administrator tasks, see the [Administration Manual](https://doc.owncloud.org/server/latest/admin_manual/). 
+For administrator tasks, see the [Server Administration Manual](https://doc.owncloud.org/server/latest/admin_manual/). 
 
 For user tasks, see the [User Manual](https://doc.owncloud.org/server/latest/user_manual/).
 
